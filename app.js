@@ -27,8 +27,11 @@ function skip() {
 
 function handleRangeUpdate() {
   video[this.name] = this.value;
-  console.log(this.value);
-  console.log(this.name);
+}
+
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressBar.getElementsByClassName.flexbasis = `${percent}%`;
 }
 
 // hook up event listeners
